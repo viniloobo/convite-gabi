@@ -497,6 +497,8 @@ section{position:relative;}
 .card .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px;}
 .card .actions .btn{padding:11px 18px;font-size:.62rem;}
 
+.card .note{margin-top:12px;color:var(--ink-soft);font-size:0.95rem;line-height:1.45}
+
 .dress{
   margin-top:56px;text-align:center;padding:30px;border:1px dashed var(--sand);border-radius:10px;
   background:rgba(255,255,255,.6);
@@ -746,7 +748,8 @@ var CONVITE = {
       quando   : "2027-02-18 09:30",
       duracao  : 2,                            // horas (usado no "adicionar à agenda")
       local    : "Catedral Metropolitana de São Sebastião",
-      endereco : "Praça das Bandeiras, s/n — Centro, Ribeirão Preto — SP"
+      endereco : "Praça das Bandeiras, s/n — Centro, Ribeirão Preto — SP",
+      nota     : "Dress Code: Para a ocasião, sugerimos o uso de roupas em tons claros, contribuindo para a harmonia e a serenidade da celebração."
     },
     {
       icone    : "jantar",
@@ -755,7 +758,8 @@ var CONVITE = {
       ate      : "03:00",                      // horário de término (opcional)
       duracao  : 7,
       local    : "Taiwan Centro de Eventos — Salão Safira",
-      endereco : "Rod. Ribeirão Preto–Bonfim Paulista, Royal Park, Ribeirão Preto — SP"
+      endereco : "Rod. Ribeirão Preto–Bonfim Paulista, Royal Park, Ribeirão Preto — SP",
+      nota     : "Convites são comprados; se houver interesse, mande mensagem."
     },
     {
       icone    : "colacao",
@@ -764,6 +768,7 @@ var CONVITE = {
       duracao  : 3,
       local    : "Taiwan Centro de Eventos — Salão Esmeralda",
       endereco : "Rod. Ribeirão Preto–Bonfim Paulista, Royal Park, Ribeirão Preto — SP",
+      nota     : "Não há necessidade de comprar convites para participar da colação de grau.",
       destaque : true                          // é o momento principal (aparece no mapa)
     },
     {
@@ -773,7 +778,8 @@ var CONVITE = {
       ate      : "08:00",
       duracao  : 10,
       local    : "Taiwan Centro de Eventos — Salão Safira",
-      endereco : "Rod. Ribeirão Preto–Bonfim Paulista, Royal Park, Ribeirão Preto — SP"
+      endereco : "Rod. Ribeirão Preto–Bonfim Paulista, Royal Park, Ribeirão Preto — SP",
+      nota     : "Convites são comprados; se houver interesse, mande mensagem."
     }
   ],
 
@@ -785,14 +791,25 @@ var CONVITE = {
 
   /* ---------- TEXTOS ---------- */
   chamadaHero : "Seis anos, incontáveis xícaras de café e alguns plantões depois… chegou a hora de vestir o jaleco de verdade. E eu quero você bem pertinho nesse dia.",
-  frase       : "“Não é só um diploma. É cada madrugada em claro, cada choro escondido no corredor e cada ‘vai dar certo’ que alguém sussurrou pra mim.”",
-  fraseAutor  : "Gabi",
+  frase       : "\"Não fui eu que ordenei a você? Seja forte e corajoso! Não se apavore, nem se desanime, pois o Senhor, o seu Deus, estará com você por onde quer que você andar.\"",
+  fraseAutor  : "Josué 1:9",
   assinatura  : "Com carinho, Gabi",
   assinaturaFinal : "Gabi",
   agradecimento   : "Obrigada por ter feito parte disso — de perto, de longe, com abraço ou com oração. Nos vemos lá.",
   localTexto      : "Chega com um tempinho de sobra: o coração já vai estar acelerado, não precisa correr também.",
   tituloContagem  : "O relógio já começou a correr",
   subContagem     : "Contagem regressiva para o primeiro dos três dias mais esperados.",
+
+  /* ---------- LINHA DO TEMPO (anos e textos) ---------- */
+  linhaDoTempo: [
+    { ano: "2021", titulo: "Aprovação", texto: "Prestes a desistir da medicina, depois de anos de cursinho… surge o aguardado nome na lista de aprovados. Tudo isso acompanhado pelo desafio da pandemia com aulas online." },
+    { ano: "2022", titulo: "O jaleco branco", texto: "O início dos “primeiros”… primeiro dia de aula presencial, primeiras provas, primeira vez vestindo o jaleco, primeiro estetoscópio, primeiro almoço marmitando na faculdade, enfim…" },
+    { ano: "2023", titulo: "1/2 médica", texto: "Na metade do caminho. Começo do ciclo clínico com a temida propedêutica (famosa por reprovar muitos alunos)." },
+    { ano: "2024", titulo: "Estágios", texto: "O período em que o estetoscópio deixou de examinar colegas de faculdade para auscultar desconhecidos. Uma pitada de prática médica, afinal a sala de aula ainda era a principal rotina." },
+    { ano: "2025", titulo: "Internato", texto: "Sim!! O INTERNATO!! O início do fim!! Os primeiros plantões das 7h às 19h e, com eles, o desafio de conciliar estágio com estudos por conta própria. Sem dúvida, o melhor ano da faculdade: aquele em que era possível sentir SER médica." },
+    { ano: "2026", titulo: "Superação", texto: "Existem medicamentos cuja dose terapêutica está muito próxima da dose tóxica. Talvez essa seja a grande metáfora de 2026. Um ano intenso na medida em que me transformou, doloroso na medida em que me fez crescer e difícil na medida em que me tornou mais forte. Nessa fase aprendi o que é também a medicina: cuidar e acolher o próximo mesmo que você esteja cansado. Depois de tudo, posso dizer que aqui descobri o que é SER médica." },
+    { ano: "2027", titulo: "Enfim, doutora", texto: "O juramento, o canudo, o abraço e a memória de todo mundo que acreditou junto comigo." }
+  ],
 
   /* ---------- NÚMEROS DIVERTIDOS ---------- */
   stats: [
@@ -801,14 +818,6 @@ var CONVITE = {
     { n:"1",  l:"sonho realizado"   }
   ],
 
-  /* ---------- LINHA DO TEMPO (texto genérico — é só trocar) ---------- */
-  linhaDoTempo: [
-    { ano:"2021", titulo:"O sim que mudou tudo",  texto:"Meu nome na lista de aprovados — e a ficha caindo devagarinho de que o caminho seria longo." },
-    { ano:"2022", titulo:"O jaleco branco",       texto:"Primeiras aulas práticas, estetoscópio novo em folha e a mão tremendo um pouquinho." },
-    { ano:"2024", titulo:"O primeiro plantão",    texto:"A madrugada que me ensinou mais do que muitos livros — e o café, que virou meu melhor amigo." },
-    { ano:"2026", titulo:"Internato",             texto:"Dois anos de hospital, de gente de verdade e de histórias que eu vou levar pra sempre." },
-    { ano:"2027", titulo:"Enfim, doutora",        texto:"O juramento, o canudo e o abraço de todo mundo que acreditou junto comigo." }
-  ],
 
   /* ---------- ABERTURA EM COLAGEM ---------- */
   colagem: {
@@ -1040,7 +1049,7 @@ var CONVITE = {
     <div class="wrap">
       <p class="eyebrow reveal">Quando e onde</p>
       <h2 class="section-title reveal d1">Anota aí na agenda</h2>
-      <p class="lead reveal d2">São três dias de festa — e eu quero você em todos eles. (Sim, pode chorar em todos também.)</p>
+      
 
       <div class="cards" id="cards"></div>
 
@@ -1254,6 +1263,7 @@ if(boxCards){
       '<h3>'+esc(ev.titulo)+'</h3>'+
       '<p class="when">'+esc(ev.dt.getDate()+" de "+MESES[ev.dt.getMonth()])+'<span class="hora">'+esc(horas)+'</span></p>'+
       '<p class="where"><strong>'+esc(ev.local)+'</strong>'+esc(ev.endereco)+'</p>'+
+      (ev.nota ? '<p class="note">'+esc(ev.nota)+'</p>' : '')+
       '<div class="actions">'+
         '<button class="btn" data-ics="'+i+'">'+SVG_AGENDA+' Agenda</button>'+
         '<a class="btn" data-maps="'+i+'" href="https://www.google.com/maps/search/?api=1&query='+mapsQuery(ev)+'" target="_blank" rel="noopener">'+SVG_MAPA+' Como chegar</a>'+
